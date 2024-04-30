@@ -285,7 +285,7 @@ const orders = [
 
 let orderTotals;
 
-orderTotals = orders.forEach((order) => order.price * (1 + order.tax ))
+orderTotals = orders.map((order) => order.price * (1 + order.tax ))
 
 /// /////// PROBLEM 13 //////////
 
@@ -301,7 +301,9 @@ const exampleMenuItems = [
 // Create a function called sortMenuItems which takes in an array of objects like the one above
 // and sorts the array by price from smallest to largest. It should return the sorted array.
 
-// REPLACE THIS WITH YOUR CODE
+const sortMenuItems = (array) => {
+  return array.sort((menuItem1, menuItem2) => menuItem1.price - menuItem2.price)
+}
 
 /// /////// PROBLEM 14 //////////
 
@@ -311,4 +313,6 @@ const exampleMenuItems = [
 //
 // Make sure to use arrow functions combined with the reduce method.
 
-// REPLACE THIS WITH YOUR CODE
+const productOfArray = (array) => {
+  return array.reduce((runningTotal, currentValue) => runningTotal * currentValue)
+}
